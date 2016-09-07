@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({
 }));
 	var recaptcha = require('express-recaptcha');
 	var keys = require('./env.js');
-	recaptcha.init('6LdSjCkTAAAAADQ9_w6RX3ulDGjR7zNsnUQBO2lq', keys.recaptchaKey);
+	recaptcha.init('YOUR_PUBLIC_KEY', keys.recaptchaKey);
 
 app.use(function(req, res, next) {
 	res.header("Access-Control-Allow-Origin", "*");
