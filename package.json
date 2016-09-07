@@ -13,9 +13,9 @@
   "author": "WDI 25",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SF-WDI-LABS/express_self_api/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/SF-WDI-LABS/express_self_api",
+  "homepage": "",
   "dependencies": {
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
