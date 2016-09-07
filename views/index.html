@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>One More Switt</title>
+  <title>Swittipedia</title>
 
   <!-- STYLESHEETS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -53,8 +53,8 @@
             <!-- handlebars template -->
             <script id="switts-template" type="text/x-handlebars-template">
               {{#each switts}}
-              <h2 class="swittHeadline">{{name}}</h2>
-              <h3 class="swittLocation">{{super_power}}</h3>
+              <h2>Name: {{name}}</h2>
+              <h3>Super Power: {{super_power}}</h3>
               <br>
               <button type="button" name="button" class="deleteBtn btn btn-primary btn-danger btn-md pull-right" data-id={{_id}}>Delete This Switt</button>
               <br>

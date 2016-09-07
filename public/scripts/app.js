@@ -1,7 +1,3 @@
-//JavaScript check
-// console.log("Sanity Check: JS is working!");
-
-
 var address;
 var template;
 var $swittsList;
