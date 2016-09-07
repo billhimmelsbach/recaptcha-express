@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>One More Switt</title>
+
+  <!-- STYLESHEETS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/styles.css">
+
+  <!-- VENDOR SCRIPTS -->
+  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  <!-- APPLICATION SCRIPTS -->
+  <script src="scripts/app.js"></script>
+
+</head>
+
+<body>
+  <div class="row">
+    <div class="topHeader text-left pull-left col-xs-12">
+      <div class="col-xs-3 topHeaderTextContainer text-left pull-left blue">
+        <h1 class="headerText">Swittipedia</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="container col-xs-8 col-xs-offset-2">
+        <div>
+          <div class="" id="collapseForm">
+            <div class="well">
+              <form class="form" id="newSwittForm">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" name="name" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label for="super_power">Super Power</label>
+                  <input type="text" class="form-control" name="super_power" placeholder="">
+                </div>
+                <br>
+                <button type="submit" class="btn btn-success btn-md collapseButton">Create Your Switt!</button>
+              </form>
+            </div>
+          </div>
+          <div id='swittTarget'>
+            <!-- handlebars template -->
+            <script id="switts-template" type="text/x-handlebars-template">
+              {{#each switts}}
+              <h2 class="swittHeadline">{{name}}</h2>
+              <h3 class="swittLocation">{{super_power}}</h3>
+              <br>
+              <button type="button" name="button" class="deleteBtn btn btn-primary btn-danger btn-md pull-right" data-id={{_id}}>Delete This Switt</button>
+              <br>
+              <hr> {{/each}}
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

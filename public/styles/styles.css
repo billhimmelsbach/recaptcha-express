@@ -1,0 +1,73 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+.collapse, .well {
+  background-color: white;
+  border-color: black;
+}
+hr {
+  border-color: black;
+}
+.swittHeadline {
+  letter-spacing: 4px;
+  line-height: 150%;
+  font-size: 2.5em;
+}
+.collapseButton {
+  border-color: black;
+  color: black;
+}
+.deleteBtn {
+  /*background-color: red;*/
+  color: black;
+  border-color: black;
+}
+html, body {
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: white;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  margin-top: 100px;
+  text-align: center;
+}
+p {
+  font-size: 1.2em;
+  color: white;
+}
+.headerText {
+  margin-top: 0;
+  color: black;
+  margin-top: 0;
+  margin-left: 0;
+  padding: 0;
+  left: 0;
+  font-size: 7vh;
+  text-align: right;
+  vertical-align: middle;
+}
+.topHeader {
+  margin: 0;
+  padding: 0;
+  height: 30vh;
+  width: 100%;
+  border-bottom: 3px solid #ff00e4s;
+}
+.topHeaderBgContainer {
+  height: 30vh;
+}
+.topHeaderTextContainer {
+  display: block;
+  vertical-align: middle;
+}
+.container {
+  display: inline-block;
+  vertical-align: middle;
+  color: black;
+}
