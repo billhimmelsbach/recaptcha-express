@@ -4,6 +4,10 @@ var db = require('./models');
 var switts_list = [{
 		name: "Turbo Switt",
 		super_power: "Faster than the normal Switt",
+	},
+	{
+		name: "CEO Switt",
+		super_power: "Able to delegate tasks, looks good in a button up",
 	}
 ];
 
