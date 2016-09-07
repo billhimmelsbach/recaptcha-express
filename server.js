@@ -7,6 +7,9 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({
 	extended: true
 }));
+	var recaptcha = require('express-recaptcha');
+	var keys = require('./env.js');
+	recaptcha.init('6LdSjCkTAAAAADQ9_w6RX3ulDGjR7zNsnUQBO2lq', keys.recaptchaKey);
 
 app.use(function(req, res, next) {
 	res.header("Access-Control-Allow-Origin", "*");
@@ -14,7 +17,7 @@ app.use(function(req, res, next) {
 	next();
 });
 
-db = require('./models');
+var db = require('./models');
 
 //load public folder
 app.use(express.static('public'));
@@ -56,17 +59,24 @@ app.get('/api/switts/:id', function(req, res) {
 	});
 });
 
-// POST one new switt based on form data in body
+//checks reCAPTCHA and if successful posts new Switt
 app.post('/api/switts', function(req, res) {
-	var newSwitt = new db.Switt({
-		name: req.body.name,
-		super_power: req.body.super_power,
-	});
-	newSwitt.save(function(err, savedSwitt) {
-		if (err) {
-			res.sendStatus(404);
+  recaptcha.verify(req, function(error){
+    if(!error) {
+			var newSwitt = new db.Switt({
+				name: req.body.name,
+				super_power: req.body.super_power,
+			});
+			newSwitt.save(function(err, savedSwitt) {
+				if (err) {
+					res.sendStatus(404);
+				}
+				res.json(savedSwitt);
+			});
 		}
-		res.json(savedSwitt);
+    else {
+			console.log("Captcha failure");
+		}
 	});
 });
 
