@@ -2,7 +2,9 @@
 
 * Setting up reCAPTCHA for Express with the express-recaptcha npm package? It's a little harder than in rails, but still easier than it sounds! Follow the instructions below with your own project. You could also clone this project, add your own public and private keys, and test it out. Message Bill with any questions! Let's destroy the bots together!
 
+<p align="center">
 <img src="https://38.media.tumblr.com/89ee74469c4d32a56a83108119fac659/tumblr_n33c6bvBvG1qcga5ro1_500.gif" width="300px" />
+</p>
 
 
 ## Basic Setup Instructions
